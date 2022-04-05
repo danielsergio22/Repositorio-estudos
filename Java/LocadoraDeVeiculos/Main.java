@@ -12,16 +12,9 @@ public class Main {
         char tipoVeiculo;
         boolean start;
         do{
-            System.out.println("Deseja Utilizar a Locadora de Veiculos? S/N");
-            if(sc.next().equalsIgnoreCase("S")){
-                start = true;
-            } else {
-                start = false;
-                break;
-            }
-            
-            System.out.println("Escolha o tipo do veiculo: <P>asseio | <C>arga");
-            tipoVeiculo = sc.next().toUpperCase().charAt(0);
+            JOptionPane.showMessageDialog(null, "Bem vindo a Locadora de Veiculos");
+            tipoVeiculo = JOptionPane.showInputDialog(null,"Escolha o tipo do veiculo: <P>asseio | <C>arga","Sistema", 3)
+            .toUpperCase().charAt(0);
             
             switch(tipoVeiculo){
                 case 'P':
@@ -38,6 +31,8 @@ public class Main {
                     JOptionPane.showMessageDialog(null, vCarga.toString(), "+++ Veiculo de Carga +++", 1);
                 break;
             }
+            start = JOptionPane.showConfirmDialog(null,"Deseja Utilizar a Locadora de Veiculos novamente?","Sistema", 0, 3) 
+            == JOptionPane.YES_OPTION;
         } while(start);
         sc.close();
     }

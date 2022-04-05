@@ -22,17 +22,16 @@ public class VeiculoCarga extends Veiculo {
         EntradaDadosVeiculos();
         setTipoCarga(JOptionPane.showInputDialog(null, "Informe o tipo de carga","Cadastro", 3));
         setCapacidade(Float.parseFloat(JOptionPane.showInputDialog(null, "Informe a capacidade","Cadastro", 3)));
-        setTamanho(JOptionPane.showInputDialog(null, "Informe o tamanho <P>equeno | <M>édio | <G>rande","Cadastro", 3).charAt(0));
-        if(JOptionPane.showConfirmDialog(null, "Informe se o veiculo possue tração dupla","Cadastro", 0, 3) == 0){
-            setTracaoDupla(true);
-        } else setTracaoDupla(false);
+        setTamanho(JOptionPane.showInputDialog(null, "Informe o tamanho <P>equeno | <M>édio | <G>rande","Cadastro", 3).toUpperCase().charAt(0));
+        setTracaoDupla(JOptionPane.showConfirmDialog(null, "Informe se o veiculo possue tração dupla","Cadastro", 0, 3)
+        == JOptionPane.YES_OPTION);
     }
 
     @Override
     public String toString() {
         return dadosVeiculos() + "\nTipo de carga: " + tipoCarga +
-        "\nCapacidade: " + capacidade + "\nTamanho: " + tamanho +
-        "\nTracaoDupla: " + tracaoDupla + dadosValores();
+        String.format("\nCapacidade: %.0f", capacidade) + "\nTamanho: " + tamanho +
+        "\nTracaoDupla: " + ((tracaoDupla) ? "sim" : "não") + dadosValores();
     }
 
 
