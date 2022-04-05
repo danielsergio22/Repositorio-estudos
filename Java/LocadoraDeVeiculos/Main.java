@@ -1,14 +1,9 @@
 package Estudos.Java.LocadoraDeVeiculos;
 
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
-
 public class Main {
-    Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         char tipoVeiculo;
         boolean start;
         do{
@@ -34,7 +29,6 @@ public class Main {
             start = JOptionPane.showConfirmDialog(null,"Deseja Utilizar a Locadora de Veiculos novamente?","Sistema", 0, 3) 
             == JOptionPane.YES_OPTION;
         } while(start);
-        sc.close();
     }
 }
 
