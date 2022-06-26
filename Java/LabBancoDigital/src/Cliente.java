@@ -1,5 +1,3 @@
-package Estudos.Java.LabBancoDigital;
-
 public class Cliente {
 
 	private String nome;

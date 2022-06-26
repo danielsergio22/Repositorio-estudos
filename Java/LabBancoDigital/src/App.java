@@ -1,7 +1,5 @@
-package Estudos.Java.LabBancoDigital;
-
 import java.util.Scanner;
-public class Testador {
+public class App {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

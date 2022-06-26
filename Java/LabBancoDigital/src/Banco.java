@@ -1,7 +1,3 @@
-package Estudos.Java.LabBancoDigital;
-
-
-
 import java.util.List;
 
 public class Banco {

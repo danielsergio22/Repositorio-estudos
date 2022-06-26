@@ -1,5 +1,3 @@
-package Estudos.Java.LabBancoDigital;
-
 public class ContaPoupanca extends Conta {
 
 	public ContaPoupanca(Cliente cliente) {

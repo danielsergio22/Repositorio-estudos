@@ -1,5 +1,3 @@
-package Estudos.Java.LabBancoDigital;
-
 public interface IConta {
 	
 	void sacar(double valor);

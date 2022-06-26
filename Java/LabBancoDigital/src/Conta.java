@@ -1,5 +1,3 @@
-package Estudos.Java.LabBancoDigital;
-
 public abstract class Conta implements IConta {
 	
 	private static final String AGENCIA_PADRAO = "NuBank";
